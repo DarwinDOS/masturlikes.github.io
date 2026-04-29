@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    padding: 40px;
+    max-width: 700px;
+    width: 100%;
+}
+
+h1 {
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.description {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.step {
+    display: none;
+}
+
+.step.active {
+    display: block;
+}
+
+.step h2 {
+    color: #444;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 500;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.btn-primary {
+    background: #4a76a8;
+    color: white;
+    width: 100%;
+}
+
+.btn-success {
+    background: #4caf50;
+    color: white;
+    width: 100%;
+}
+
+.hint {
+    color: #999;
+    font-size: 14px;
+    margin-top: 12px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: 500;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+select:focus {
+    border-color: #667eea;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background: #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    width: 0%;
+    transition: width 0.3s;
+}
+
+#progressText {
+    text-align: center;
+    color: #666;
+    font-weight: bold;
+}
+
+.results {
+    display: none;
+}
+
+.results.show {
+    display: block;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 20px 0;
+}
+
+.stat-card {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.stat-card span {
+    font-size: 32px;
+    font-weight: bold;
+    color: #667eea;
+    display: block;
+}
+
+.stat-card p {
+    color: #666;
+    margin-top: 8px;
+}
+
+.posts-list {
+    margin: 20px 0;
+}
+
+.post-item {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 12px;
+    border-left: 4px solid #e0e0e0;
+    transition: border-color 0.3s;
+}
+
+.post-item.liked {
+    border-left-color: #4caf50;
+    background: #f0fff0;
+}
+
+.post-item.not-liked {
+    border-left-color: #f44336;
+    background: #fff5f5;
+}
+
+.post-text {
+    color: #333;
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.post-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #666;
+    font-size: 14px;
+}
+
+.like-status {
+    font-weight: bold;
+}
+
+.like-status.liked {
+    color: #4caf50;
+}
+
+.like-status.not-liked {
+    color: #f44336;
+}
+
+.hidden {
+    display: none;
+}
+
+#newCheck {
+    margin-top: 20px;
+}
