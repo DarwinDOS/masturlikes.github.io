@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проверка своих лайков VK</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🔍 Проверка своих лайков</h1>
+        <p class="description">
+            Узнайте, на каких своих постах вы поставили лайк
+        </p>
+        
+        <!-- Шаг 1: Авторизация -->
+        <div id="step1" class="step active">
+            <h2>Шаг 1: Авторизация VK</h2>
+            <button id="authButton" class="btn btn-primary">
+                Войти через ВКонтакте
+            </button>
+            <p class="hint">Потребуются права на доступ к стене и лайкам</p>
+        </div>
+        
+        <!-- Шаг 2: Настройки -->
+        <div id="step2" class="step">
+            <h2>Шаг 2: Параметры проверки</h2>
+            
+            <div class="form-group">
+                <label for="postCount">Количество постов для проверки:</label>
+                <select id="postCount">
+                    <option value="10">10 последних</option>
+                    <option value="25">25 последних</option>
+                    <option value="50" selected>50 последних</option>
+                    <option value="100">100 последних</option>
+                </select>
+            </div>
+            
+            <button id="checkButton" class="btn btn-success">
+                Начать проверку
+            </button>
+        </div>
+        
+        <!-- Шаг 3: Прогресс -->
+        <div id="step3" class="step">
+            <h2>Проверка...</h2>
+            <div class="progress-bar">
+                <div id="progressFill" class="progress-fill"></div>
+            </div>
+            <p id="progressText">0%</p>
+        </div>
+        
+        <!-- Результаты -->
+        <div id="results" class="results hidden">
+            <h2>Результаты проверки</h2>
+            
+            <div class="stats">
+                <div class="stat-card">
+                    <span id="totalPosts">0</span>
+                    <p>Проверено постов</p>
+                </div>
+                <div class="stat-card">
+                    <span id="selfLikedPosts">0</span>
+                    <p>Самолайков</p>
+                </div>
+            </div>
+            
+            <div id="postsList" class="posts-list"></div>
+            
+            <button id="newCheck" class="btn btn-primary">
+                Новая проверка
+            </button>
+        </div>
+    </div>
+    
+    <script src="https://vk.com/js/api/openapi.js?169"></script>
+    <script src="script.js"></script>
+</body>
+</html>
